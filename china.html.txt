@@ -1,0 +1,175 @@
+frog psc, [01.12.2025 19:14]
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О Китае - Вокруг света</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-globe-asia"></i>
+                    <span>Вокруг света</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#tours">Туры</a></li>
+                    <li><a href="china.html" class="active">О Китае</a></li>
+                    <li><a href="index.html#advantages">Преимущества</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 120px;">
+        <h1 class="section-title">Китай: Страна древней мудрости и современных чудес</h1>
+        
+        <section class="about-china-detailed">
+            <div class="about-text-full">
+                <p>Китай — это не просто страна, это целый мир со своей уникальной философией, тысячелетней историей и стремительно развивающейся современностью.</p>
+            </div>
+            
+            <div class="history-section">
+                <h2><i class="fas fa-landmark"></i> История и культура</h2>
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p>Китайская цивилизация — одна из древнейших в мире, её история насчитывает более 5000 лет. Страна подарила человечеству множество изобретений: бумагу, компас, порох, книгопечатание.</p>
+                        <p>Империи сменяли друг друга, оставляя после себя великие памятники: Великую Китайскую стену, Запретный город в Пекине, терракотовую армию в Сиане.</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1547981609-4b6bf67b7d46?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="История Китая">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="traditions-section">
+                <h2><i class="fas fa-yin-yang"></i> Традиции и философия</h2>
+                <div class="content-grid reverse">
+                    <div class="content-text">
+                        <p>Конфуцианство, даосизм и буддизм сформировали менталитет китайского народа. Уважение к старшим, гармония с природой, стремление к балансу — основы китайской философии.</p>
+                        <p>Китайские праздники — это красочные зрелища: Праздник весны (Китайский Новый год), Праздник середины осени, День драконьих лодок.</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Традиции">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modern-section">
+                <h2><i class="fas fa-city"></i> Современный Китай</h2>
+                <div class="content-grid">
+
+frog psc, [01.12.2025 19:14]
+<div class="content-text">
+                        <p>Сегодня Китай — это экономический гигант, технологический лидер и культурный экспортёр. Небоскребы Шанхая, инновации Шэньчжэня, высокоскоростные поезда — символы новой эпохи.</p>
+                        <p>При этом страна бережно хранит свои традиции: чайные церемонии, каллиграфия, боевые искусства продолжают жить в современном обществе.</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1518599807935-37015b9cefcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Современный Китай">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="back-button">
+            <a href="index.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Вернуться на главную
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-globe-asia"></i>
+                    <span>Вокруг света</span>
+                </div>
+                <p>© 2024 Туристическая фирма «Вокруг света». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <style>
+        .about-china-detailed {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .about-text-full {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            padding: 0 20px;
+        }
+        
+        .history-section, .traditions-section, .modern-section {
+            margin-bottom: 60px;
+        }
+        
+        .history-section h2, .traditions-section h2, .modern-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .reverse {
+            direction: rtl;
+        }
+        
+        .reverse .content-text {
+            direction: ltr;
+        }
+        
+        .content-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .content-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .back-button {
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .reverse {
+                direction: ltr;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,88 @@
+// Мобильное меню
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // Закрытие меню при клике на ссылку
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // FAQ аккордеон
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('i');
+            
+            // Закрыть другие открытые ответы
+            document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                if (otherAnswer !== answer && otherAnswer.classList.contains('active')) {
+                    otherAnswer.classList.remove('active');
+                    otherAnswer.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                    otherAnswer.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                }
+            });
+            
+            // Переключить текущий ответ
+            answer.classList.toggle('active');
+            if (answer.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    });
+    
+    // Обработка формы
+    const bookingForm = document.querySelector('.booking-form');
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Сбор данных формы
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Имитация отправки
+            alert('Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в течение 24 часов.');
+            this.reset();
+            
+            // Здесь обычно отправка на сервер:
+            // fetch('/api/booking', {
+            //     method: 'POST',
+            //     headers: {'Content-Type': 'application/json'},
+            //     body: JSON.stringify(data)
+            // })
+        });
+    }
+    
+    // Плавная прокрутка для якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+})
